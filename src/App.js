@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Board from "./Components/Board/Board";
+import Search from "./Components/Search/Search";
+import Row from "./Components/DataRow/Row";
+import useFetch from "./Hooks/useFetch";
+import React, { useState } from "react";
 
 function App() {
+  const [currentPage, setCurrentPage] = useState(1);
+  const [postsPerPage, setPostsPerPage] = useState(10);
+  const { response } = useFetch(
+    "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
+  );
+  console.log(response);
+  //Get Current Post
+
+  const indexOfLastPost = currentPage * postsPerPage;
+  const indexOfFirstPost = indexOfLastPost - postsPerPage;
+  // const currentPosts = response.slice(indexOfFirstPost, indexOfLastPost);
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="Margin">
+      <Search />
+      <Row />
+      {response.map((item, index) => {
+        return <Row {...item} key={index + item.id} />;
+      })}
     </div>
   );
 }
