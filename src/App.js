@@ -12,7 +12,7 @@ function App() {
     "https://geektrust.s3-ap-southeast-1.amazonaws.com/adminui-problem/members.json"
   );
   console.log(response);
-  //Get Current Post
+ 
 
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
