@@ -1,0 +1,64 @@
+.circle {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(41, 80, 252);
+  border-radius: 50px;
+  color: white;
+  background: rgb(41, 80, 252);
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+.circle:hover {
+  background: white;
+  color: black;
+  border: 1px solid rgb(41, 80, 252);
+}
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  gap: 20px;
+}
+.pages {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 0;
+}
+li {
+  list-style: none;
+  text-decoration: none;
+}
+a {
+  text-decoration: none;
+}
+.active {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(41, 80, 252);
+
+  border-radius: 50px;
+  color: black;
+  background: white;
+  cursor: pointer;
+}
+.disable {
+  height: 40px;
+  width: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgb(143, 143, 143);
+
+  border-radius: 50px;
+  color: rgb(143, 143, 143);
+  background: rgb(211, 211, 211);
+}
