@@ -4,7 +4,6 @@ import { RxDoubleArrowRight } from "react-icons/rx";
 import { RiArrowRightSLine } from "react-icons/ri";
 import { RiArrowLeftSLine } from "react-icons/ri";
 import "./style.css";
-//
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   const [currentPage, setPage] = useState(1);
